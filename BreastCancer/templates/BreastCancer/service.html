@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+{%block content1 %}
+<div class="page-section">
+    <div class="wrap bg-image" style="background-image: url({% static 'assets/img/bg_pattern.svg' %});">
+      <div class="container text-center">
+        <div class="row justify-content-center wow fadeInUp">
+          <div class="col-lg-10">
+            <h2 class="mb-4">Breast Cancer Prediction</h2>
+            <form method="post">
+               {%csrf_token%}
+             <div class="row justify-content-center">
+                 <div class="col-3">
+                {% render_field predictForm.radius_mean|attr:'required:true'   class="form-control" placeholder="Radius_mean" %}
+                 </div>
+
+                 <div class="col-3">
+                     {% render_field predictForm.texture_mean|attr:'required:true'   class="form-control" placeholder="texture_mean" %}
+                 </div>
+
+                 <div class="col-3">
+                     {% render_field predictForm.perimeter_mean|attr:'required:true'   class="form-control" placeholder="perimeter_mean" %}
+                 </div>
+             </div>
+
+           <div class="row justify-content-center">
+                 <div class="col-3">
+                {% render_field predictForm.area_mean|attr:'required:true'   class="form-control" placeholder="area_mean" %}
+                 </div>
+
+                 <div class="col-3">
+                     {% render_field predictForm.smoothness_mean|attr:'required:true'   class="form-control" placeholder="smoothness_mean" %}
+                 </div>
+
+                 <div class="col-3">
+                     {% render_field predictForm.compactness_mean|attr:'required:true'   class="form-control" placeholder="compactness_mean" %}
+                 </div>
+             </div>
+
+                <div class="row justify-content-center">
+                 <div class="col-3">
+                {% render_field predictForm.concavity_mean|attr:'required:true'   class="form-control" placeholder="concavity_mean" %}
+                 </div>
+
+                 <div class="col-3">
+                     {% render_field predictForm.concave_points_mean|attr:'required:true'   class="form-control" placeholder="concave_points_mean" %}
+                 </div>
+
+                 <div class="col-3">
+                     {% render_field predictForm.symmetry_mean|attr:'required:true'   class="form-control" placeholder="symmetry_mean" %}
+                 </div>
+             </div>
+
+                <div class="row justify-content-center">
+                 <div class="col-3">
+                {% render_field predictForm.radius_se|attr:'required:true'   class="form-control" placeholder="radius_se" %}
+                 </div>
+
+                 <div class="col-3">
+                     {% render_field predictForm.perimeter_se|attr:'required:true'   class="form-control" placeholder="perimeter_se" %}
+                 </div>
+
+                 <div class="col-3">
+                     {% render_field predictForm.area_se|attr:'required:true'   class="form-control" placeholder="area_se" %}
+                 </div>
+             </div>
+
+                <div class="row justify-content-center">
+                 <div class="col-3">
+                {% render_field predictForm.compactness_se|attr:'required:true'   class="form-control" placeholder="compactness_se" %}
+                 </div>
+
+                 <div class="col-3">
+                     {% render_field predictForm.concavity_se|attr:'required:true'   class="form-control" placeholder="concavity_se" %}
+                 </div>
+
+                 <div class="col-3">
+                     {% render_field predictForm.fractal_dimension_se|attr:'required:true'   class="form-control" placeholder="fractal_dimension_se" %}
+                 </div>
+             </div>
+
+                <div class="row justify-content-center">
+                 <div class="col-3">
+                {% render_field predictForm.radius_worst|attr:'required:true'   class="form-control" placeholder="radius_worst" %}
+                 </div>
+
+                 <div class="col-3">
+                     {% render_field predictForm.texture_worst|attr:'required:true'   class="form-control" placeholder="texture_worst" %}
+                 </div>
+
+                 <div class="col-3">
+                     {% render_field predictForm.perimeter_worst|attr:'required:true'   class="form-control" placeholder="perimeter_worst" %}
+                 </div>
+             </div>
+
+                <div class="row justify-content-center">
+                 <div class="col-3">
+                {% render_field predictForm.area_worst|attr:'required:true'   class="form-control" placeholder="area_worst" %}
+                 </div>
+
+                 <div class="col-3">
+                     {% render_field predictForm.smoothness_worst|attr:'required:true'   class="form-control" placeholder="smoothness_worst" %}
+                 </div>
+
+                 <div class="col-3">
+                     {% render_field predictForm.compactness_worst|attr:'required:true'   class="form-control" placeholder="compactness_worst" %}
+                 </div>
+             </div>
+
+                <div class="row justify-content-center">
+                 <div class="col-3">
+                {% render_field predictForm.concavity_worst|attr:'required:true'   class="form-control" placeholder="concavity_worst" %}
+                 </div>
+
+                 <div class="col-3">
+                     {% render_field predictForm.concave_points_worst|attr:'required:true'   class="form-control" placeholder="concave_points_worst" %}
+                 </div>
+
+                 <div class="col-3">
+                     {% render_field predictForm.symmetry_worst|attr:'required:true'   class="form-control" placeholder="symmetry_worst" %}
+                 </div>
+                    <div class="col-3">
+                     {% render_field predictForm.fractal_dimension_worst|attr:'required:true'   class="form-control" placeholder="fractal_dimension_worst" %}
+                 </div>
+             </div>
+
+                <div class="col-lg-8 text-center">
+              <button type="submit" class="btn btn-success">Predict</button>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div> <!-- .container -->
+    </div> <!-- .wrap -->
+  </div> <!-- .page-section -->
+{%endblock%}
+

@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+{%block banner %}
+    <div class="container">
+      <div class=" home-banner">
+        <div class="row align-items-center flex-wrap-reverse h-100">
+          <div class="col-md-6 py-5 wow fadeInLeft">
+            <h1 class="mb-4">Let's Check and Detect Breast Cancer</h1>
+            <p class="text-lg text-grey mb-5"> The application is built with accurate prediction in mind</p>
+            <a href="{% url 'service' %}" class="btn btn-primary btn-split">Proceed <div class="fab"><span class="mai-play"></span></div></a>
+          </div>
+          <div class="col-md-6 py-5 wow zoomIn">
+            <div class="img-fluid">
+              <img src="{% static 'assets/img/group_doctor3.jpg' %}"  width="400" alt="">
+            </div>
+          </div>
+        </div>
+        <a href="#about" class="btn-scroll" data-role="smoothscroll"><span class="mai-arrow-down"></span></a>
+      </div>
+    </div>
+  </header>
+{%endblock %}
+
+{%block content1%}
+<div class="page-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 py-3">
+          <h2 class="title-section">Information about the Breast Cancer</h2>
+          <div class="divider"></div>
+          <h4 class="">Worldwide Public Health</h4>
+
+          <p>Breast  cancer  is  the most  common  type  of  cancer  among women which
+              is highly heterogeneous, and caused by the  interplay of hereditary and
+              environmental risk factors . It is caused by irregular growth of cells
+              in the breast tissue, which leads to the creation of tumors that could
+              be benign (non-cancerous) or malignant (cancerous). Nearly, 25% of deaths
+              due to breast cancer are in the women aged from 40 to 49 years.
+              This type of cancer is rarely seen before the age of 25–30, but it has been
+              reported even in adolescent women. Based on the statistics published by
+              the World Health Organization, one  in 8  to 10 women suffers  from breast cancer.
+              Breast cancer can be categorized into two, which are malignant breast cancer and benign breast cancer.
+</p>
+        </div>
+        <div class="col-lg-6 py-3">
+          <div class="img-fluid py-3 text-center">
+            <img src="{% static 'assets/img/group_doctor.png' %}"  width="500" height="400" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{%endblock %}
